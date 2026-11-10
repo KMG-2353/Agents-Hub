@@ -3,7 +3,8 @@ export interface Agent {
 	name: string;
 	description: string;
 	category: string;
-	url: string;
+	/** Where the agent is hosted. Leave out until it is deployed; the row then shows no Open action. */
+	url?: string;
 	status: "live" | "beta" | "wip";
 }
 
@@ -13,9 +14,33 @@ const agents: Agent[] = [
 		name: "Data Gen AI",
 		description:
 			"A practical AI assistant that turns existing insurance Excel templates into realistic, consistent test data.",
-		category: "Link",
+		category: "Test data",
 		url: "https://data-gen-ai-1.onrender.com/",
 		status: "live",
+	},
+	{
+		id: "pom-agent",
+		name: "POM Agent",
+		description:
+			"Inspects a web page in a headless browser and exports a Python Playwright Page Object Model built only from selectors it observed and validated.",
+		category: "Test automation",
+		status: "beta",
+	},
+	{
+		id: "testcase-gen",
+		name: "Testcase Gen",
+		description:
+			"Generates test cases from insurance requirement documents (happy path, negative, boundary, equivalence partition and end-to-end), each cited to its requirement ID and exported to Excel.",
+		category: "Test design",
+		status: "beta",
+	},
+	{
+		id: "wcg-agent",
+		name: "WCGAgent",
+		description:
+			"Tests web pages against WCAG 2.2 Level AA and gives a verdict for each success criterion (pass, fail, not applicable or needs review), with evidence behind every finding.",
+		category: "Accessibility",
+		status: "wip",
 	},
 ];
 

@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-10T06:02:45+00:00",
+  "title": "Design System: Agents Hub",
+  "extensions": {
+    "colorMeta": {
+      "brand": {
+        "role": "primary",
+        "displayName": "Electric Ultramarine",
+        "canonical": "#2a36e8",
+        "tonalRamp": [
+          "#0c104a",
+          "#141b7c",
+          "#1e28b0",
+          "#2a36e8",
+          "#5560ef",
+          "#8790f6",
+          "#bcc1fb",
+          "#e6e8fe"
+        ],
+        "note": "Swappable brand token (--brand). Hero field, selection, focus, live, Open hover."
+      },
+      "brand-ink": {
+        "role": "primary",
+        "displayName": "Field Ink",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "#545b6d",
+          "#7c8396",
+          "#a5abba",
+          "#c8ccd6",
+          "#e1e4ea",
+          "#eef0f4",
+          "#f7f8fb",
+          "#ffffff"
+        ],
+        "note": "Text and cells on the brand field (--brand-ink)."
+      },
+      "brand-muted": {
+        "role": "primary",
+        "displayName": "Pale Periwinkle",
+        "canonical": "#d3d6ff",
+        "tonalRamp": [
+          "#3a3f8a",
+          "#5258b4",
+          "#6c73d6",
+          "#8b91ee",
+          "#a9aef8",
+          "#c0c4fd",
+          "#d3d6ff",
+          "#eceeff"
+        ],
+        "note": "Secondary text on the field; hand-tuned tint, must be retuned with --brand."
+      },
+      "ledger-grey": {
+        "role": "neutral",
+        "displayName": "Ledger Grey",
+        "canonical": "#eef0f4",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "Light page ground (--bg)."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0b0e1a",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "Headings, filled glyph cells, strong rule (--ink, --line-strong)."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Slate",
+        "canonical": "#545b6d",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "Secondary text (--muted)."
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d3d8e1",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "1px rules and borders (--line)."
+      },
+      "rule-strong": {
+        "role": "neutral",
+        "displayName": "Strong Rule",
+        "canonical": "#0b0e1a",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "2px schedule rule, control outlines (--line-strong)."
+      },
+      "hover-wash": {
+        "role": "neutral",
+        "displayName": "Hover Wash",
+        "canonical": "#f7f8fb",
+        "tonalRamp": [
+          "#0b0e1a",
+          "#1c2130",
+          "#363c4d",
+          "#545b6d",
+          "#8a91a2",
+          "#b8bfcb",
+          "#d3d8e1",
+          "#eef0f4"
+        ],
+        "note": "Row hover and focus tint (--hover)."
+      },
+      "brand-dark": {
+        "role": "primary",
+        "displayName": "Electric Ultramarine (dark theme)",
+        "canonical": "#2733d6",
+        "tonalRamp": [
+          "#0c104a",
+          "#141b7c",
+          "#1e28b0",
+          "#2a36e8",
+          "#5560ef",
+          "#8790f6",
+          "#bcc1fb",
+          "#e6e8fe"
+        ],
+        "note": "--brand under :root.dark."
+      },
+      "brand-muted-dark": {
+        "role": "primary",
+        "displayName": "Pale Periwinkle (dark theme)",
+        "canonical": "#cdd1ff",
+        "tonalRamp": [
+          "#3a3f8a",
+          "#5258b4",
+          "#6c73d6",
+          "#8b91ee",
+          "#a9aef8",
+          "#c0c4fd",
+          "#cdd1ff",
+          "#eceeff"
+        ],
+        "note": "--brand-muted under :root.dark."
+      },
+      "night-ground": {
+        "role": "neutral",
+        "displayName": "Night Ground",
+        "canonical": "#090b12",
+        "tonalRamp": [
+          "#090b12",
+          "#10131d",
+          "#141826",
+          "#222739",
+          "#3a4056",
+          "#5f6780",
+          "#979eb2",
+          "#e9ecf4"
+        ],
+        "note": "Dark page ground (--bg)."
+      },
+      "ink-dark": {
+        "role": "neutral",
+        "displayName": "Ink (dark theme)",
+        "canonical": "#e9ecf4",
+        "tonalRamp": [
+          "#090b12",
+          "#10131d",
+          "#222739",
+          "#3a4056",
+          "#5f6780",
+          "#979eb2",
+          "#c9cedb",
+          "#e9ecf4"
+        ],
+        "note": "--ink and --line-strong under :root.dark."
+      },
+      "muted-dark": {
+        "role": "neutral",
+        "displayName": "Muted Slate (dark theme)",
+        "canonical": "#979eb2",
+        "tonalRamp": [
+          "#090b12",
+          "#10131d",
+          "#222739",
+          "#3a4056",
+          "#5f6780",
+          "#979eb2",
+          "#c9cedb",
+          "#e9ecf4"
+        ]
+      },
+      "hairline-dark": {
+        "role": "neutral",
+        "displayName": "Hairline (dark theme)",
+        "canonical": "#222739",
+        "tonalRamp": [
+          "#090b12",
+          "#10131d",
+          "#222739",
+          "#3a4056",
+          "#5f6780",
+          "#979eb2",
+          "#c9cedb",
+          "#e9ecf4"
+        ]
+      },
+      "hover-wash-dark": {
+        "role": "neutral",
+        "displayName": "Hover Wash (dark theme)",
+        "canonical": "#141826",
+        "tonalRamp": [
+          "#090b12",
+          "#10131d",
+          "#141826",
+          "#222739",
+          "#3a4056",
+          "#5f6780",
+          "#979eb2",
+          "#e9ecf4"
+        ]
+      },
+      "live-dark": {
+        "role": "primary",
+        "displayName": "Live Signal (dark theme)",
+        "canonical": "#9aa2ff",
+        "tonalRamp": [
+          "#1e2470",
+          "#2f379e",
+          "#4650c8",
+          "#6670e6",
+          "#808af5",
+          "#9aa2ff",
+          "#c3c8ff",
+          "#e8eaff"
+        ],
+        "note": "--live under :root.dark; light theme --live = --brand."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero title only, on the brand field. font-stretch 125%, text-wrap balance."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings (1.875-2.25rem; secondary sections 1.5-1.75rem). font-stretch 118%."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Agent names (1.25-1.375rem) and the wordmark (0.95rem). font-stretch 118%."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Hero purpose line in Pale Periwinkle (1.125-1.25rem)."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Descriptions and explanatory text in Muted Slate, max 62ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, chips, status, counts, categories, footer. Tabular figures."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Schedule column headings, sentence case, Muted Slate."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-out-expo",
+        "value": "cubic-bezier(0.16, 1, 0.3, 1)",
+        "purpose": "The single easing for state transitions and the lattice wave."
+      },
+      {
+        "name": "state-duration",
+        "value": "240ms",
+        "purpose": "Row tint, sibling quieting, Open fill and arrow nudge."
+      },
+      {
+        "name": "lattice-cycle",
+        "value": "9s",
+        "purpose": "One diagonal fill-in wave across the hero triangle; delay = (r+c-9)*0.34s + r*0.05s."
+      },
+      {
+        "name": "sibling-quiet",
+        "value": "opacity 0.5",
+        "purpose": "Other rows fade when one row is hovered or focused."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "768px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ],
+    "brandSwap": {
+      "description": "KMG branding must remain a token change. Update every location below together; components must not carry literal brand values.",
+      "locations": [
+        "src/index.css :root --brand",
+        "src/index.css :root.dark --brand",
+        "src/index.css :root and :root.dark --brand-muted (tint of brand)",
+        "src/index.css :root.dark --live (light theme inherits --brand)",
+        "src/index.css --brand-ink in both themes, only if the new brand needs dark ink",
+        "index.html <meta name=\"theme-color\">",
+        "public/favicon.svg background rect fill"
+      ]
+    }
+  },
+  "components": [
+    {
+      "name": "Open Action",
+      "kind": "button",
+      "refersTo": "button-open",
+      "description": "Primary action at the end of each agent row; fills with brand when the row is hovered or focused.",
+      "html": "<a class=\"ds-open\" href=\"#\">Open <svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.25\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M7 7h10v10\"/><path d=\"M7 17 17 7\"/></svg></a>",
+      "css": ".ds-open { display: inline-flex; align-items: center; gap: 6px; height: 40px; padding: 0 14px; border: 1px solid var(--line-strong, #0b0e1a); border-radius: var(--radius, 6px); color: var(--ink, #0b0e1a); background: transparent; font-family: var(--font, 'Archivo Variable', sans-serif); font-size: 0.875rem; font-weight: 600; text-decoration: none; transition: background-color 240ms cubic-bezier(0.16, 1, 0.3, 1), color 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-open svg { transition: transform 240ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-open:hover, .ds-open:focus-visible { background: var(--brand, #2a36e8); border-color: var(--brand, #2a36e8); color: var(--brand-ink, #fff); } .ds-open:hover svg, .ds-open:focus-visible svg { transform: translate(2px, -2px); } .ds-open:focus-visible { outline: 2px solid var(--brand, #2a36e8); outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip-filter",
+      "description": "Category filter in the schedule header; shown only with two or more categories.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip\" aria-pressed=\"true\">All</button><button class=\"ds-chip\" aria-pressed=\"false\">Underwriting</button><button class=\"ds-chip\" aria-pressed=\"false\">Claims</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 8px; } .ds-chip { height: 36px; padding: 0 14px; border: 1px solid var(--line, #d3d8e1); border-radius: var(--radius, 6px); background: transparent; color: var(--muted, #545b6d); font-family: var(--font, 'Archivo Variable', sans-serif); font-size: 0.875rem; font-weight: 500; cursor: pointer; } .ds-chip:hover { border-color: var(--line-strong, #0b0e1a); color: var(--ink, #0b0e1a); } .ds-chip[aria-pressed=\"true\"] { background: var(--ink, #0b0e1a); border-color: var(--line-strong, #0b0e1a); color: var(--bg, #eef0f4); } .ds-chip:focus-visible { outline: 2px solid var(--brand, #2a36e8); outline-offset: 3px; }"
+    },
+    {
+      "name": "Field Top Bar",
+      "kind": "nav",
+      "refersTo": "hero-field",
+      "description": "Wordmark with lattice mark and theme toggle on the brand field.",
+      "html": "<div class=\"ds-field-bar\"><a class=\"ds-wordmark\" href=\"#\"><svg width=\"24\" height=\"24\" viewBox=\"0 0 34 34\" aria-hidden=\"true\"><g fill=\"currentColor\"><rect x=\"0.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"0.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"0.5\" y=\"24.5\" width=\"9\" height=\"9\"/></g><g fill=\"none\" stroke=\"currentColor\" stroke-opacity=\"0.6\"><rect x=\"24.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"24.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"24.5\" width=\"9\" height=\"9\"/></g></svg><span>Intelligent Automation</span></a><button class=\"ds-field-icon\" aria-label=\"Switch to dark theme\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z\"/></svg></button></div>",
+      "css": ".ds-field-bar { display: flex; align-items: center; justify-content: space-between; height: 80px; padding: 0 40px; background: var(--brand, #2a36e8); color: var(--brand-ink, #fff); } .ds-wordmark { display: flex; align-items: center; gap: 12px; color: inherit; text-decoration: none; font-family: var(--font, 'Archivo Variable', sans-serif); font-stretch: 118%; font-size: 0.95rem; font-weight: 600; letter-spacing: -0.01em; } .ds-field-icon { display: grid; place-items: center; width: 40px; height: 40px; border: 1px solid color-mix(in srgb, var(--brand-ink, #fff) 30%, transparent); border-radius: var(--radius, 6px); background: transparent; color: var(--brand-ink, #fff); cursor: pointer; } .ds-field-icon:hover { background: color-mix(in srgb, var(--brand-ink, #fff) 12%, transparent); } .ds-field-icon:active { background: color-mix(in srgb, var(--brand-ink, #fff) 20%, transparent); } .ds-field-bar :focus-visible { outline: 2px solid var(--brand-ink, #fff); outline-offset: 3px; }"
+    },
+    {
+      "name": "Agent Row",
+      "kind": "custom",
+      "refersTo": "agent-row",
+      "description": "Signature schedule row: glyph, name and category, description, status, Open action; the whole row is one link.",
+      "html": "<a class=\"ds-row\" href=\"#\"><svg class=\"ds-glyph\" viewBox=\"0 0 46 46\" aria-hidden=\"true\"><g fill=\"var(--ink, #0b0e1a)\"><rect x=\"0.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"36.5\" y=\"0.5\" width=\"9\" height=\"9\"/><rect x=\"0.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"0.5\" y=\"24.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"24.5\" width=\"9\" height=\"9\"/></g><rect x=\"0.5\" y=\"36.5\" width=\"9\" height=\"9\" fill=\"var(--live, #2a36e8)\"/><g fill=\"none\" stroke=\"var(--line, #d3d8e1)\"><rect x=\"36.5\" y=\"12.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"24.5\" width=\"9\" height=\"9\"/><rect x=\"36.5\" y=\"24.5\" width=\"9\" height=\"9\"/><rect x=\"12.5\" y=\"36.5\" width=\"9\" height=\"9\"/><rect x=\"24.5\" y=\"36.5\" width=\"9\" height=\"9\"/><rect x=\"36.5\" y=\"36.5\" width=\"9\" height=\"9\"/></g></svg><span class=\"ds-row-name\"><strong>Data Gen AI</strong><small>Test data</small></span><span class=\"ds-row-desc\">Turns existing insurance Excel templates into realistic, consistent test data.</span><span class=\"ds-status ds-status-live\"><svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" aria-hidden=\"true\"><rect width=\"10\" height=\"10\" fill=\"var(--live, #2a36e8)\"/></svg>Live</span><span class=\"ds-row-open\">Open</span></a>",
+      "css": ".ds-row { display: grid; grid-template-columns: 46px minmax(10rem,1fr) minmax(0,1.6fr) 7rem auto; align-items: center; column-gap: 32px; padding: 28px 12px; border-bottom: 1px solid var(--line, #d3d8e1); color: var(--ink, #0b0e1a); text-decoration: none; font-family: var(--font, 'Archivo Variable', sans-serif); transition: background-color 240ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover, .ds-row:focus-visible { background: var(--hover, #f7f8fb); } .ds-row:focus-visible { outline: 2px solid var(--brand, #2a36e8); outline-offset: -2px; } .ds-glyph { width: 46px; height: 46px; } .ds-row-name strong { display: block; font-stretch: 118%; font-size: 1.375rem; font-weight: 600; line-height: 1.25; letter-spacing: -0.015em; } .ds-row-name small { display: block; margin-top: 4px; font-size: 0.875rem; color: var(--muted, #545b6d); } .ds-row-desc { font-size: 1rem; line-height: 1.625; color: var(--muted, #545b6d); } .ds-status { display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 600; } .ds-status-live { color: var(--live, #2a36e8); } .ds-row-open { display: inline-flex; align-items: center; height: 40px; padding: 0 14px; border: 1px solid var(--line-strong, #0b0e1a); border-radius: var(--radius, 6px); font-size: 0.875rem; font-weight: 600; transition: background-color 240ms cubic-bezier(0.16, 1, 0.3, 1), color 240ms cubic-bezier(0.16, 1, 0.3, 1), border-color 240ms cubic-bezier(0.16, 1, 0.3, 1); } .ds-row:hover .ds-row-open, .ds-row:focus-visible .ds-row-open { background: var(--brand, #2a36e8); border-color: var(--brand, #2a36e8); color: var(--brand-ink, #fff); }"
+    },
+    {
+      "name": "Status Marks",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "State told by cell shape: solid (Live), half-filled (Beta), dashed outline (In progress).",
+      "html": "<div class=\"ds-statuses\"><span class=\"ds-st ds-st-live\"><svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" aria-hidden=\"true\"><rect width=\"10\" height=\"10\" fill=\"var(--live, #2a36e8)\"/></svg>Live</span><span class=\"ds-st ds-st-beta\"><svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" aria-hidden=\"true\"><rect x=\"0.5\" y=\"0.5\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"var(--ink, #0b0e1a)\"/><rect y=\"5\" width=\"10\" height=\"5\" fill=\"var(--ink, #0b0e1a)\"/></svg>Beta</span><span class=\"ds-st ds-st-wip\"><svg width=\"10\" height=\"10\" viewBox=\"0 0 10 10\" aria-hidden=\"true\"><rect x=\"0.5\" y=\"0.5\" width=\"9\" height=\"9\" fill=\"none\" stroke=\"var(--muted, #545b6d)\" stroke-dasharray=\"2 1.5\"/></svg>In progress</span></div>",
+      "css": ".ds-statuses { display: flex; gap: 24px; font-family: var(--font, 'Archivo Variable', sans-serif); } .ds-st { display: inline-flex; align-items: center; gap: 8px; font-size: 0.875rem; font-weight: 600; } .ds-st-live { color: var(--live, #2a36e8); } .ds-st-beta { color: var(--ink, #0b0e1a); } .ds-st-wip { color: var(--muted, #545b6d); }"
+    },
+    {
+      "name": "Schedule Header",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Expanded section heading over a 2px ink rule, then caption-size column headings over a hairline.",
+      "html": "<div class=\"ds-sched\"><h2 class=\"ds-sched-h\">Agents</h2><div class=\"ds-sched-cols\"><span></span><span>Agent</span><span>What it does</span><span>Status</span></div></div>",
+      "css": ".ds-sched { font-family: var(--font, 'Archivo Variable', sans-serif); color: var(--ink, #0b0e1a); } .ds-sched-h { margin: 0; padding-bottom: 20px; border-bottom: 2px solid var(--line-strong, #0b0e1a); font-stretch: 118%; font-size: 2.25rem; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; } .ds-sched-cols { display: grid; grid-template-columns: 46px minmax(10rem,1fr) minmax(0,1.6fr) 7rem; column-gap: 32px; padding: 12px; border-bottom: 1px solid var(--line, #d3d8e1); font-size: 0.75rem; font-weight: 500; color: var(--muted, #545b6d); }"
+    },
+    {
+      "name": "Hero Field with Lattice",
+      "kind": "custom",
+      "refersTo": "display",
+      "description": "Flat brand field with expanded display title, purpose line and the self-filling development triangle (reduced 5x5 here).",
+      "html": "<div class=\"ds-hero\"><div><h1 class=\"ds-display\">Agents Hub</h1><p class=\"ds-lead\">Intelligent automation agents for insurance work.</p></div><svg class=\"ds-lattice\" viewBox=\"0 0 58 58\" aria-hidden=\"true\"><rect x=\"0\" y=\"0\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"12\" y=\"0\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"24\" y=\"0\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"36\" y=\"0\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"48\" y=\"0\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"0\" y=\"12\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"12\" y=\"12\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"24\" y=\"12\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"36\" y=\"12\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"48\" y=\"12\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.05s\"/><rect x=\"0\" y=\"24\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"12\" y=\"24\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"24\" y=\"24\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"36\" y=\"24\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.10s\"/><rect x=\"48\" y=\"24\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.44s\"/><rect x=\"0\" y=\"36\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"12\" y=\"36\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"24\" y=\"36\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.15s\"/><rect x=\"36\" y=\"36\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.49s\"/><rect x=\"48\" y=\"36\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.83s\"/><rect x=\"0\" y=\"48\" width=\"10\" height=\"10\" class=\"k\" style=\"animation-delay:0.00s\"/><rect x=\"12\" y=\"48\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.20s\"/><rect x=\"24\" y=\"48\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.54s\"/><rect x=\"36\" y=\"48\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:0.88s\"/><rect x=\"48\" y=\"48\" width=\"10\" height=\"10\" class=\"o\" style=\"animation-delay:1.22s\"/></svg></div>",
+      "css": ".ds-hero { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; padding: 56px 40px 48px; background: var(--brand, #2a36e8); color: var(--brand-ink, #fff); font-family: var(--font, 'Archivo Variable', sans-serif); } .ds-display { margin: 0; font-size: 4rem; font-stretch: 125%; font-weight: 640; letter-spacing: -0.035em; line-height: 0.92; text-wrap: balance; } .ds-lead { margin: 20px 0 0; max-width: 30rem; font-size: 1.125rem; line-height: 1.625; color: var(--brand-muted, #d3d6ff); } .ds-lattice { width: 140px; flex-shrink: 0; } .ds-lattice .k { fill: var(--brand-ink, #fff); fill-opacity: 0.94; } .ds-lattice .o { fill: var(--brand-ink, #fff); fill-opacity: 0; stroke: var(--brand-ink, #fff); stroke-opacity: 0.38; stroke-width: 0.5; animation: ds-project 9s cubic-bezier(0.16, 1, 0.3, 1) infinite; } @keyframes ds-project { 0% { fill-opacity: 0; } 5% { fill-opacity: 0.6; } 13%, 62% { fill-opacity: 0.38; } 74%, 100% { fill-opacity: 0; } } @media (prefers-reduced-motion: reduce) { .ds-lattice .o { animation: none; fill-opacity: 0.38; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Self-Completing Table",
+    "overview": "Agents Hub is one abstract working surface where insurance's ruled, tabular order meets agents doing the work. The page reads like a loss-development triangle being filled in cell by cell with no human hand: a flat electric-ultramarine field owns the top of the page, square cells on a strict grid are the only ornament, and everything below the field is organised by ruled hairlines and tabular figures on a cool grey (light) or near-black (dark) ground.\n\nThe world is flat, square and ruled. There are no gradients, no glows, no shadows, no photography and no card grid. Depth comes from the single saturated field set against a quiet ledger ground; hierarchy comes from Archivo's width axis (expanded for display and headings, normal width for reading) and from rule weight (a 2px ink rule opens a schedule, 1px hairlines divide its rows). The density is calm: one agent must look complete, fifteen must still look ordered.\n\nThe system was built to accept KMG branding later. Every saturated pixel derives from one brand token, so the identity can be swapped without touching component code.",
+    "keyCharacteristics": [
+      "One flat brand field at the top of the page; one accent colour across the whole system.",
+      "Square cells (no radius) as the only ornament: hero lattice, wordmark, per-agent glyphs, status marks, favicon.",
+      "Ruled tables, not cards: hairline rows, a heavy opening rule, column headings in small muted text.",
+      "Archivo variable, stretched to 118-125% width for display and headings, normal width for text.",
+      "Tabular figures for every count, year and number.",
+      "Light and dark themes share one structure; only token values change."
+    ],
+    "rules": [
+      {
+        "name": "The One Voice Rule",
+        "body": "Brand is the only accent. It appears as the hero field and in small, meaningful marks (live status, focus, selection, the Open hover). Do not add a second hue for categories, status or decoration; status is told by cell shape, not colour.",
+        "section": "colors"
+      },
+      {
+        "name": "The One-Token Brand Swap Rule",
+        "body": "KMG branding will replace the current ultramarine. The swap must stay a token change, never a component edit. The complete swap list is: `--brand` in both `:root` and `:root.dark`; `--brand-muted` in both (it is a tint of the brand); `--live` in `:root.dark` (light theme inherits `--brand`); `--brand-ink` if the new brand is light enough to need dark ink; `<meta name=\"theme-color\">` in `index.html`; and the background `fill` in `public/favicon.svg`. Components must reference `var(--brand)` / `var(--live)` / `var(--brand-ink)` (or the `brand`, `live`, `brand-ink` Tailwind colours), never a literal brand hex.",
+        "section": "colors"
+      },
+      {
+        "name": "The Width Carries Rank Rule",
+        "body": "Display and headings are expanded (118-125%); running text is never expanded. Do not introduce a second typeface for headings.",
+        "section": "typography"
+      },
+      {
+        "name": "The Tabular Figures Rule",
+        "body": "Counts, years and any numeric column use `tabular-nums`.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels and column headings are sentence case at normal tracking. No uppercase tracked labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Rows Not Cards Rule",
+        "body": "Collections are ruled rows in a schedule, never a grid of cards. A new agent adds a row; the layout does not change between 1 and 15 agents.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Ledger Rule",
+        "body": "No shadows, gradients, glows or blur. If something needs emphasis, give it the brand colour, a heavier rule, or quiet everything else.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Square Cell Rule",
+        "body": "Ornament is square cells on a strict grid, nothing else. No circles, blobs, illustrations or icon tiles as decoration. Functional UI icons (sun/moon, up-right arrow) are 16-18px line icons at stroke 2-2.25.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** reference brand colour only through `var(--brand)`, `var(--live)`, `var(--brand-ink)` and `var(--brand-muted)` so a KMG swap stays a token change.",
+      "**Do** update `theme-color` in `index.html` and the favicon fill in `public/favicon.svg` whenever `--brand` changes.",
+      "**Do** build any new ornament or mark from square cells on the 12-unit lattice step.",
+      "**Do** list collections as ruled rows with a 2px ink opening rule and 1px hairlines.",
+      "**Do** expand headings with Archivo's width axis (118-125%) and keep running text at normal width.",
+      "**Do** use tabular figures for counts and dates.",
+      "**Do** signal status by cell shape (solid, half, dashed) with the label always present.",
+      "**Do** use 240ms `cubic-bezier(0.16, 1, 0.3, 1)` for state transitions and drop them under `prefers-reduced-motion`."
+    ],
+    "donts": [
+      "**Don't** add a second accent hue; status, categories and decoration stay in brand plus neutrals.",
+      "**Don't** hard-code the brand hex (or a literal white standing in for `brand-ink`) in component code.",
+      "**Don't** use shadows, gradients, glows or blur.",
+      "**Don't** round cells; the 6px radius is for interactive controls only.",
+      "**Don't** present agents as a grid of cards.",
+      "**Don't** add uppercase tracked labels or eyebrow text above headings."
+    ]
+  }
+}

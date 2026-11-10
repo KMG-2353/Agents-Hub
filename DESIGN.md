@@ -223,16 +223,19 @@ There are no cards. Containers are ruled bands: a schedule (2px ink rule, captio
 A single top bar inside the brand field: 24px lattice mark plus wordmark (title style at 0.95rem, 118% width) on the left, theme toggle on the right. No menu. The footer repeats a 16px mark and wordmark in ink.
 
 ### Agent Row (signature)
-The whole row is one link that opens the agent in a new tab. Glyph, name and category, plain-language description, status mark, Open action. Hover or focus tints the row with Hover Wash and fades every other row to 50% opacity (240ms, same easing); focus uses an inset 2px brand outline.
+The whole row is one link that opens the agent in a new tab (rows without a `url` render as plain rows with a muted "No link yet" and no hover response). Icon, name and category, plain-language description, status mark, Open action. Hover or focus tints the row with Hover Wash and fades every other row to 50% opacity (240ms, same easing); focus uses an inset 2px brand outline.
+
+### Agent Icon (signature)
+The agent's mark when it declares an `icon` in `src/agents.ts`: a Lucide icon (20px, 1.75 stroke, ink) centred in a hairline square cell (40-46px, 0 radius, the lattice's unit). A live agent lights an 8px Live Signal cell at the tile's top-right corner. On a linked row's hover or focus the tile border steps up to Strong Rule. Icons come from Lucide only, one per agent, chosen for what the agent produces or checks. An agent with no icon falls back to its Agent Glyph.
 
 ### Agent Glyph (signature)
-A 4×4 cell mark generated from the agent id: a full top row and descending stepped runs beneath, filled in ink with hairline outlines for empty cells. A live agent lights its leading cell in Live Signal. 40-46px.
+The fallback mark for agents without an icon. A 4×4 cell mark generated from the agent id: a full top row and descending stepped runs beneath, filled in ink with hairline outlines for empty cells. A live agent lights its leading cell in Live Signal. 40-46px.
 
 ### Status Mark (signature)
 A single 10px cell carries state by shape, not hue: **Live** solid Live Signal cell with Live-coloured label; **Beta** outlined ink cell half-filled from the bottom with ink label; **In progress** dashed muted outline with muted label.
 
 ### Lattice (signature)
-The hero's 9×9 development triangle in field ink. The upper-left triangle is solid (94% opacity, the known record); the lower-right cells are 38%-opacity outlines that fill in a slow diagonal wave (9s cycle, `cubic-bezier(0.16, 1, 0.3, 1)`, staggered by diagonal). Under reduced motion the open cells rest at 38% fill. The 3×3 wordmark mark and the favicon are reductions of the same triangle.
+The hero's 9×9 development triangle in field ink. The upper-left triangle is solid (94% opacity, the known record); the lower-right cells are 38%-opacity outlines that fill in a slow diagonal wave (9s cycle, `cubic-bezier(0.16, 1, 0.3, 1)`, staggered by diagonal). Under reduced motion the open cells rest at 38% fill. The 3×3 wordmark mark and the favicon are reductions of the same triangle; the favicon draws its projected cells as 42% fills rather than outlines so they hold at 16px. Favicon set: `favicon.svg`, `favicon.ico` (32px), `apple-touch-icon.png` (180, full-bleed), `icon-192/512.png` and `site.webmanifest` in `public/`.
 
 ## Do's and Don'ts
 

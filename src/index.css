@@ -230,3 +230,12 @@ a.agent-row:focus-visible {
     transition: none;
   }
 }
+
+a.agent-row .agent-icon {
+  transition: border-color 240ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+a.agent-row:hover .agent-icon,
+a.agent-row:focus-visible .agent-icon {
+  border-color: var(--line-strong);
+}

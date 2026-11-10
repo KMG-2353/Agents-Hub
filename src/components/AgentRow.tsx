@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Agent } from "@/agents";
-import { AgentGlyph } from "@/components/AgentGlyph";
+import { AgentIcon } from "@/components/AgentIcon";
 import { StatusMark } from "@/components/StatusMark";
 import { statusLabel } from "@/lib/status";
 
@@ -10,7 +10,7 @@ const rowLayout =
 export function AgentRow({ agent }: { agent: Agent }) {
 	const body = (
 		<>
-			<AgentGlyph agent={agent} className="size-10 sm:size-[2.875rem]" />
+			<AgentIcon agent={agent} className="size-10 sm:size-[2.875rem]" />
 
 			<div className="min-w-0">
 				<h3 className="wide text-xl font-semibold leading-tight tracking-[-0.015em] sm:text-[1.375rem]">

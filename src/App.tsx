@@ -55,7 +55,7 @@ export default function App() {
 						<div className="max-w-[40rem]">
 							<h1 className="display text-[clamp(3.25rem,8.5vw,6rem)]">Agents Hub</h1>
 							<p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-brand-muted sm:text-xl">
-								Intelligent automation agents for insurance work. Each one opens as its own app.
+								AI agents for insurance QA. Test data, test cases, page objects and accessibility checks, each handled by an agent built for the job.
 							</p>
 							<div className="mt-8 flex items-end justify-between gap-6">
 								<p className="flex items-center gap-3 text-sm font-medium tabular-nums text-brand-ink">

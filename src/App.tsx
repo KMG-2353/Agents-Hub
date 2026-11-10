@@ -3,7 +3,8 @@ import { Moon, Sun } from "lucide-react";
 import agents from "@/agents";
 import { AgentRow } from "@/components/AgentRow";
 import { Lattice, LatticeMark } from "@/components/Lattice";
-import { StatusCell, statusLabel, statusMeaning } from "@/components/StatusMark";
+import { StatusCell } from "@/components/StatusMark";
+import { statusLabel, statusMeaning } from "@/lib/status";
 import { useTheme } from "@/hooks/useTheme";
 import { cn } from "@/lib/utils";
 

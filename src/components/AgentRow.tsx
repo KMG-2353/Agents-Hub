@@ -1,7 +1,8 @@
 import { ArrowUpRight } from "lucide-react";
 import type { Agent } from "@/agents";
 import { AgentGlyph } from "@/components/AgentGlyph";
-import { StatusMark, statusLabel } from "@/components/StatusMark";
+import { StatusMark } from "@/components/StatusMark";
+import { statusLabel } from "@/lib/status";
 
 const rowLayout =
 	"agent-row grid grid-cols-[2.5rem_1fr_auto] items-start gap-x-4 gap-y-3 border-b border-line px-1 py-6 sm:gap-x-6 sm:px-3 lg:grid-cols-[2.875rem_minmax(14rem,1fr)_minmax(0,1.6fr)_8.5rem_6.5rem] lg:items-center lg:gap-x-8 lg:py-7";

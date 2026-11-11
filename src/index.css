@@ -2,23 +2,33 @@
 @import "@fontsource-variable/archivo/wdth.css";
 
 /*
-  Agents Hub tokens.
-  --brand is the single swappable brand colour (the hero field, live status,
-  focus and selection all derive from it). Swap it when KMG branding lands.
+  Agents Hub tokens, toned to the KMG identity.
+  --kmg-1..6 are the six KMG shades from the logo, left to right (dark orange,
+  orange, gold, green, light blue, blue). They never change between themes.
+  --brand is the KMG blue, deepened one step so white and tinted text on the
+  hero field clear AA. Every saturated surface derives from these tokens.
 */
 :root {
-  --brand: #2a36e8;
-  --brand-ink: #ffffff;
-  --brand-muted: #d3d6ff;
+  --kmg-1: #d47f2e;
+  --kmg-2: #ec9e39;
+  --kmg-3: #e9bc5a;
+  --kmg-4: #6aa063;
+  --kmg-5: #5b86e2;
+  --kmg-6: #456aba;
 
-  --bg: #eef0f4;
+  --brand: #3f62b0;
+  --brand-ink: #ffffff;
+  --brand-muted: #e3e9f8;
+
+  --bg: #f4f4f1;
   --surface: #ffffff;
-  --ink: #0b0e1a;
-  --muted: #545b6d;
-  --line: #d3d8e1;
-  --line-strong: #0b0e1a;
-  --live: var(--brand);
-  --hover: #f7f8fb;
+  --ink: #111216;
+  --muted: #5b5e66;
+  --line: #dcdcd6;
+  --line-strong: #111216;
+  --live: #3b7a36;
+  --focus: var(--brand);
+  --hover: #fafaf8;
 
   --radius: 6px;
   --font: "Archivo Variable", "Archivo", ui-sans-serif, system-ui, sans-serif;
@@ -27,18 +37,19 @@
 }
 
 :root.dark {
-  --brand: #2733d6;
+  --brand: #34539a;
   --brand-ink: #ffffff;
-  --brand-muted: #cdd1ff;
+  --brand-muted: #d9e2f6;
 
-  --bg: #090b12;
-  --surface: #10131d;
-  --ink: #e9ecf4;
-  --muted: #979eb2;
-  --line: #222739;
-  --line-strong: #e9ecf4;
-  --live: #9aa2ff;
-  --hover: #141826;
+  --bg: #0f1013;
+  --surface: #17181c;
+  --ink: #ecedef;
+  --muted: #9a9ea8;
+  --line: #26282e;
+  --line-strong: #ecedef;
+  --live: #7db574;
+  --focus: #89a9ef;
+  --hover: #17181c;
 
   color-scheme: dark;
 }
@@ -54,6 +65,7 @@
   --color-line: var(--line);
   --color-line-strong: var(--line-strong);
   --color-live: var(--live);
+  --color-focus: var(--focus);
   --color-hover: var(--hover);
   --font-sans: var(--font);
 }
@@ -86,7 +98,7 @@
   }
 
   :focus-visible {
-    outline: 2px solid var(--brand);
+    outline: 2px solid var(--focus);
     outline-offset: 3px;
   }
 
@@ -135,6 +147,14 @@
   font-stretch: 118%;
 }
 
+/* ---------- KMG band (the six shades, where the field meets the page) ---------- */
+
+.kmg-band {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  height: 6px;
+}
+
 /* ---------- Lattice (the hero's projection triangle) ---------- */
 
 .lattice-known {
@@ -143,7 +163,7 @@
 }
 
 .lattice-open {
-  fill: var(--brand-ink);
+  fill: var(--cell, var(--brand-ink));
   fill-opacity: 0;
   stroke: var(--brand-ink);
   stroke-opacity: 0.38;
@@ -155,14 +175,11 @@
   0% {
     fill-opacity: 0;
   }
-  5% {
-    fill-opacity: 0.6;
-  }
-  13% {
-    fill-opacity: 0.38;
+  6% {
+    fill-opacity: 1;
   }
   62% {
-    fill-opacity: 0.38;
+    fill-opacity: 1;
   }
   74%,
   100% {
@@ -173,7 +190,7 @@
 @media (prefers-reduced-motion: reduce) {
   .lattice-open {
     animation: none;
-    fill-opacity: 0.38;
+    fill-opacity: 1;
   }
 }
 

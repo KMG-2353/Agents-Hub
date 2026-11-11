@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import agents from "@/agents";
 import { AgentRow } from "@/components/AgentRow";
+import { KmgBand, KmgLogo } from "@/components/KmgLogo";
 import { Lattice, LatticeMark } from "@/components/Lattice";
 import { StatusCell } from "@/components/StatusMark";
 import { statusLabel, statusMeaning } from "@/lib/status";
@@ -27,12 +28,13 @@ export default function App() {
 
 	return (
 		<div className="min-h-screen bg-bg text-ink">
-			<header className="field">
-				<div className="mx-auto flex max-w-[80rem] sm:min-h-[min(62svh,36rem)] flex-col px-5 sm:px-10 lg:px-16">
-					<div className="flex h-20 items-center justify-between">
-						<a href="/" className="flex items-center gap-3 rounded-sm">
-							<LatticeMark className="size-6" />
-							<span className="wide text-[0.95rem] font-semibold tracking-[-0.01em]">
+			<header>
+				<div className="border-b border-line">
+					<div className="mx-auto flex h-[4.5rem] max-w-[80rem] items-center justify-between gap-4 px-5 sm:h-20 sm:px-10 lg:px-16">
+						<a href="/" className="flex min-w-0 items-center gap-2.5 rounded-sm sm:gap-4">
+							<KmgLogo className="h-6 w-auto shrink-0 text-ink sm:h-8" />
+							<span aria-hidden="true" className="h-5 w-px shrink-0 bg-line sm:h-6" />
+							<span className="wide truncate text-sm font-semibold tracking-[-0.01em] sm:text-[0.95rem]">
 								Intelligent Automation
 							</span>
 						</a>
@@ -41,7 +43,7 @@ export default function App() {
 							onClick={toggle}
 							aria-label={`Switch to ${nextTheme} theme`}
 							title={`Switch to ${nextTheme} theme`}
-							className="grid size-10 place-items-center rounded-[var(--radius)] border border-brand-ink/30 text-brand-ink hover:bg-brand-ink/12 active:bg-brand-ink/20"
+							className="grid size-10 shrink-0 place-items-center rounded-[var(--radius)] border border-line text-ink hover:border-line-strong hover:bg-hover"
 						>
 							{theme === "dark" ? (
 								<Sun className="size-[1.125rem]" strokeWidth={2} aria-hidden="true" />
@@ -50,12 +52,14 @@ export default function App() {
 							)}
 						</button>
 					</div>
+				</div>
 
-					<div className="grid flex-1 items-end gap-10 pb-10 pt-14 sm:pb-16 sm:pt-6 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-12">
+				<div className="field">
+					<div className="mx-auto grid max-w-[80rem] items-end gap-10 px-5 pb-10 pt-12 sm:min-h-[min(52svh,31rem)] sm:px-10 sm:pb-16 sm:pt-14 md:grid-cols-[minmax(0,1.15fr)_minmax(0,0.85fr)] md:gap-12 lg:px-16">
 						<div className="max-w-[40rem]">
 							<h1 className="display text-[clamp(3.25rem,8.5vw,6rem)]">Agents Hub</h1>
 							<p className="mt-6 max-w-[34rem] text-lg leading-relaxed text-brand-muted sm:text-xl">
-								AI agents for insurance QA. Test data, test cases, page objects and accessibility checks, each handled by an agent built for the job.
+								AI agents for Insurance QA. Test data, Test cases, Page objects, and Accessibility checks, each handled by an agent built for the job.
 							</p>
 							<div className="mt-8 flex items-end justify-between gap-6">
 								<p className="flex items-center gap-3 text-sm font-medium tabular-nums text-brand-ink">
@@ -69,6 +73,7 @@ export default function App() {
 						<Lattice className="ml-auto hidden w-full max-w-[26rem] md:-mb-4 md:block" />
 					</div>
 				</div>
+				<KmgBand className="kmg-band" />
 			</header>
 
 			<main className="mx-auto max-w-[80rem] px-5 sm:px-10 lg:px-16">

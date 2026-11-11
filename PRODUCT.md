@@ -29,11 +29,11 @@ A curated shelf of working agents built for insurance automation work (the first
 
 - Per-agent data is limited to name, description, category, status and link. No owners, inputs/outputs or tags are planned.
 - Light and dark themes with a user toggle must be supported (`src/hooks/useTheme.ts`).
-- Branding is open for now; KMG branding (logo, colors) will be added later, so the visual system must accept a brand swap without a rebuild.
+- KMG branding (logo and the six-shade palette) is applied through tokens in `src/index.css`; the visual system must still accept a brand retune without a component rebuild.
 
 ## Brand Commitments
 
-None binding yet. Product name: "Agents Hub" / "Intelligent Automation Agents Hub".
+KMG (Key Management Group) identity: the KMG mark in the header, the six KMG shades (#d47f2e, #ec9e39, #e9bc5a, #6aa063, #5b86e2, #456aba) and KMG blue as the working accent. Product name: "Agents Hub" / "Intelligent Automation Agents Hub".
 
 ## Evidence on Hand
 

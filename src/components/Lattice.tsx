@@ -1,7 +1,11 @@
+import type React from "react";
+
 /**
  * The hero's signature: a development triangle. The upper-left cells are the
  * known record; the lower-right cells are projected, filling in as a slow
- * diagonal wave, as if the agents were completing the table.
+ * diagonal wave, as if the agents were completing the table. Projected cells
+ * take the KMG shades in logo order, two diagonals per shade, running from
+ * dark orange at the known edge to green at the far corner.
  */
 const SIZE = 9;
 const STEP = 12;
@@ -12,6 +16,7 @@ interface Cell {
 	c: number;
 	known: boolean;
 	delay: number;
+	shade: number;
 }
 
 const cells: Cell[] = [];
@@ -19,7 +24,13 @@ for (let r = 0; r < SIZE; r++) {
 	for (let c = 0; c < SIZE; c++) {
 		const known = c < SIZE - r;
 		const wave = r + c - SIZE;
-		cells.push({ r, c, known, delay: known ? 0 : wave * 0.34 + r * 0.05 });
+		cells.push({
+			r,
+			c,
+			known,
+			delay: known ? 0 : wave * 0.34 + r * 0.05,
+			shade: known ? 0 : Math.floor(wave / 2) + 1,
+		});
 	}
 }
 
@@ -32,7 +43,7 @@ export function Lattice({ className }: { className?: string }) {
 			aria-hidden="true"
 			focusable="false"
 		>
-			{cells.map(({ r, c, known, delay }) => (
+			{cells.map(({ r, c, known, delay, shade }) => (
 				<rect
 					key={`${r}-${c}`}
 					x={c * STEP}
@@ -40,7 +51,14 @@ export function Lattice({ className }: { className?: string }) {
 					width={CELL}
 					height={CELL}
 					className={known ? "lattice-known" : "lattice-open"}
-					style={known ? undefined : { animationDelay: `${delay.toFixed(2)}s` }}
+					style={
+						known
+							? undefined
+							: ({
+									animationDelay: `${delay.toFixed(2)}s`,
+									"--cell": `var(--kmg-${shade})`,
+								} as React.CSSProperties)
+					}
 				/>
 			))}
 		</svg>

@@ -44,7 +44,7 @@ const agents: Agent[] = [
 	{
 		id: "wcg-agent",
 		icon: Accessibility,
-		name: "WCGAgent",
+		name: "Accessibility Agent",
 		description:
 			"Tests web pages against WCAG 2.2 Level AA and gives a verdict for each success criterion (pass, fail, not applicable or needs review), with evidence behind every finding.",
 		category: "Accessibility",
